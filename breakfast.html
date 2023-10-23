@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3040/3040052.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\breakfast.css">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/aa4e7733af.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+    <!-- JavaScript Script -->
+    <script src="scripts/breakfast.js"></script>
+  </head>
+  <body>
+    <section id="title">
+      <div class="container-fluid">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand text-white" href="main.html"><i class="fa-regular fa-bookmark"></i><span class="ml-2">Recipe Book</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="main.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="breakfast.html">Breakfast</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="lunch.html">Lunch</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="dinner.html">Dinner</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section id="breakfast" class="container mt-4">
+      <h2 class="text-center">Breakfast Recipes</h2>
+      <section id="todo-list" class="container mt-4">
+        <h2 class="text-center">To-Do List</h2>
+        <div class="mb-3">
+          <input type="text" id="task-input" class="form-control" placeholder="Add a new task">
+          <button class="btn btn-primary" style="background-color: #1A7F53; color: #fff;" onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list" class="list-group">
+        </ul>
+      </section>
+      <!-- Timer Section -->
+      <section id="timer" class="container mt-4">
+        <h2 class="text-center">Countdown Timer</h2>
+        <div>
+          <label for="input-minutes">Set Timer (minutes):</label>
+          <input type="number" id="input-minutes" min="1" step="1" placeholder="Enter minutes" />
+          <button id="start-button" class="btn btn-custom-primary">Start Timer</button>
+        </div>
+        <div id="timer-display" class="countdown-timer">00:00</div>
+        <button id="stop-button" class="btn btn-custom-danger">Stop Timer</button>
+        <!-- Displaying timer feedback -->
+        <div id="timer-feedback" class="alert alert-success" style="display: none;"></div>
+      </section>
+      <!-- Bootstrap Carousel -->
+      <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Scrambled Eggs Recipe -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Scrambled Eggs (10 minutes)</h3>
+                <img src="images\scrambled.jpg" alt="Scrambled Eggs" class="img-fluid mb-4">
+              </div>
+              <div class="col-md-6">
+                <p class="lead"><strong>A simple and delicious breakfast dish made with eggs, butter, and seasoning.</strong></p>
+                <ol>
+                  <li>Lightly whisk 2 large eggs, 6 tbsp single cream or full cream milk and a pinch of salt together until the mixture has just one consistency.</li>
+                  <li>Heat a small non-stick frying pan for a minute or so, then add a knob of butter and let it melt. Don’t allow the butter to brown or it will discolour the eggs.</li>
+                  <li>Pour in the egg mixture and let it sit, without stirring, for 20 seconds. Stir with a wooden spoon, lifting and folding it over from the bottom of the pan.</li>
+                  <li>Let it sit for another 10 seconds then stir and fold again.</li>
+                  <li>Repeat until the eggs are softly set and slightly runny in places. Remove from the heat and leave for a moment to finish cooking.</li>
+                  <li>Give a final stir and serve the velvety scramble without delay.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- Pancakes Recipe -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6">
+                <h3>Pancakes (20 minutes)</h3>
+                <img src="images\pancakes.jpg" alt="Pancakes" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <p class="lead"><strong>American pancakes topped with maple syrup and fresh berries.</strong></p>
+                <ol>
+                  <li>Mix 200g self-raising flour, 1 ½ tsp baking powder, 1 tbsp golden caster sugar and a pinch of salt together in a large bowl.</li>
+                  <li>Create a well in the centre with the back of your spoon then add 3 large eggs, 25g melted butter and 200ml milk.</li>
+                  <li>Whisk together either with a balloon whisk or electric hand beaters until smooth then pour into a jug.</li>
+                  <li>Heat a small knob of butter and 1 tsp of oil in a large, non-stick frying pan over a medium heat. When butter looks frothy, pour in rounds of the batter, approximately 8cm wide. Make sure you don’t put the pancakes too close together as they will spread during cooking. Cook the pancakes on one side for about 1-2 mins or until lots of tiny bubbles start to appear and pop on the surface. Flip the pancakes over and cook for a further minute on the other side. Repeat until all the batter is used up.</li>
+                  <li>Serve your pancakes stacked up on a plate with a drizzle of maple syrup and any of your favourite toppings.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+        </a>
+        <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+        </a>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2023 Recipe Book</p>
+    </footer>
+  </body>

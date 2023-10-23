@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3040/3040052.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\dinner.css">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/aa4e7733af.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
+    <!-- JavaScript Script -->
+    <script src="scripts/dinner.js"></script>
+  </head>
+  <body>
+    <section id="title">
+      <div class="container-fluid">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand text-white" href="main.html"><i class="fa-regular fa-bookmark"></i><span class="ml-2">Recipe Book</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="main.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="breakfast.html">Breakfast</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="lunch.html">Lunch</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="dinner.html">Dinner</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section id="dinner" class="container mt-4">
+      <h2 class="text-center">Dinner Recipes</h2>
+      <section id="todo-list" class="container mt-4">
+        <h2 class="text-center">To-Do List</h2>
+        <div class="mb-3">
+          <input type="text" id="task-input" class="form-control" placeholder="Add a new task">
+          <button class="btn btn-primary" style="background-color: #1A7F53; color: #fff;" onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list" class="list-group">
+        </ul>
+      </section>
+      <!-- Timer Section -->
+      <section id="timer" class="container mt-4">
+        <h2 class="text-center">Countdown Timer</h2>
+        <div>
+          <label for="input-minutes">Set Timer (minutes):</label>
+          <input type="number" id="input-minutes" min="1" step="1" placeholder="Enter minutes" />
+          <button id="start-button" class="btn btn-custom-primary">Start Timer</button>
+        </div>
+        <div id="timer-display" class="countdown-timer">00:00</div>
+        <button id="stop-button" class="btn btn-custom-danger">Stop Timer</button>
+        <!-- Displaying timer feedback -->
+        <div id="timer-feedback" class="alert alert-success" style="display: none;"></div>
+      </section>
+      <!-- Spaghetti Bolognese Recipe -->
+      <article class="mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Spaghetti Bolognese (40 minutes)</h3>
+            <img src="images\bolognese.jpg" alt="Spaghetti Bolognese" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <p class="lead"><strong>Classic spaghetti bolognese with ground beef and tomato sauce.</strong></p>
+            <ol>
+              <li>Put 1 tbsp of the oil in a large saucepan over a medium-high heat, add the beef and fry until well browned. Tip out into a dish and repeat with 1 tbsp oil and the pork. Tip the pork into the dish with the beef and put the pan back on the heat with the remaining oil. Turn the heat down and cook the shallots for 8-10 mins or until very soft, then add the garlic. Tip the meat back into the pan and add the passata, purée, wine, and oregano. Stir everything together, cover and simmer over a low heat, stirring occasionally, for 45 mins.</li>
+              <li>Cook the spaghetti following pack instructions, then stir half the parmesan into the Bolognese. Put a spoonful of the pasta water into the sauce to loosen it if it looks too thick, then drain the spaghetti. For a better flavour, tip the pasta onto the sauce, toss everything together to coat, and season well (or serve with the sauce on top). Add the remaining parmesan and a few basil leaves.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+      <!-- Grilled Salmon Recipe -->
+      <article class="mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Grilled Salmon (30 minutes)</h3>
+            <img src="images\salmon.jpg" alt="Grilled Salmon" class="img-fluid mb-4">
+          </div>
+          <div class="col-md-6">
+            <p class="lead"><strong>A salmon fillet served with lemon and dill sauce.</strong></p>
+            <ol>
+              <li>Turn the grill to high and line a baking tray with foil. Mix the lemon zest and juice, mustard and honey. Put the salmon on the tray, brush with a little of the dressing, then grill for 5-7 mins – there is no need to turn the salmon over until it flakes easily when tested with a knife.</li>
+              <li>Meanwhile, heat the oil in a wok and cook the spring onions and beetroot. Tip in the lentils with 4 tbsp water, cover the pan and cook for 2 mins to heat through. Tip into a bowl and toss with the remaining dressing, the basil, and rocket. Serve with the salmon.</li>
+            </ol>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <p>&copy; 2023 Recipe Book</p>
+    </footer>
+  </body>
